@@ -1,47 +1,36 @@
-<?php class a {
+<?php
 
-public $t;
+class DateCompare
+{
+  public $date;
+  // public $e;
+  // private $a;
 
-public $e;
+//
+    public function __constructor($date)
+    {
+        $this->t = new DateTime($date);
+    }
 
-private $a;
+// clona timestamp, le añade un intervalo y lo devuelve
 
-public function __constructor($a){
+    public function cloneTimeAddInterval($timestamp, DateInterval $interval)
+    {
+        $timestamp = clone $date;
+        $timestamp->add($interval);
+        return $timestamp;
+    }
 
-$this->t = new DateTime($a);
+// Compara dos objetos datetime y sustrae una cantidad
+    public function dateTimeSub(DateTime $date, DateInterval $interval)
+    {
+        $timestamp = clone $date;
+        $timestamp->sub($interval);
+        return $timestamp;
+    }
 
+    public function dateDiff($date)
+    {
+        return $this->t->diff($date);
+    }
 }
-
-public function b($a,DateInterval $i){
-
-$b = clone $a->add($i);
-
-$b->add($i);
-
-return $b;
-
-}
-
-public function c(DateTime $a,DateInterval $i){
-
-$b = clone $a->sub($i);
-
-$b->add($i);
-
-return $b;
-
-}
-
-public function d($t){
-
-return $this->t->diff($t);
-
-}
-
-private function e(){
-
-return $this->$t
-
-}
-
-} ?>
